@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+/.vs
+/code/.vs
+/code/code/x64
+*.vcxproj.user
+*.vcxproj.filters
+*.pdb
