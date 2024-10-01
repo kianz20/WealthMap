@@ -15,8 +15,8 @@ void code::on_addButton_clicked() {
     AddDialog dialog(this);
 
     if (dialog.exec()) {
-        QString name = dialog.nameEdit->text();
-        QString email = dialog.emailEdit->text();
+        QString name = dialog.nameInput->text();
+        QString email = dialog.costInput->text();
 
 
         if (!name.isEmpty() && !email.isEmpty()) {
@@ -32,7 +32,7 @@ void code::on_weeklyExpenses_currentItemChanged() {
 
     if (curItem) {
         ui.nameLabel->setText("Name: " + curItem->text());
-        ui.emailLabel->setText("Email: " + curItem->data(Qt::UserRole).toString());
+        ui.emailLabel->setText("Cost: " + curItem->data(Qt::UserRole).toString() + " per week");
     }
     else {
         ui.nameLabel->setText("<No item selected>");
